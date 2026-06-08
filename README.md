@@ -11,7 +11,7 @@ Quick steps (recommended):
    git commit -m "Publish portfolio site"
    git push origin main
 
-3. Open your repository on github.com (https://github.com/<your-username>/portfolio).
+3. Open your repository on github.com (https://github.com/chompunutr04/portfolio).
 4. Go to Settings → Pages. Under "Source" choose the `main` branch and `/ (root)` folder, then Save.
    - After a moment, GitHub will provide a site URL like: `https://<your-username>.github.io/portfolio/`.
 
