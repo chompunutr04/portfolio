@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio - Chompunut</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5969/5969113.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --c-50:#eefcfd; --c-100:#d3f5fa; --c-200:#ace9f5; --c-300:#75d8ed; --c-400:#33bcdd; --c-500:#17a0c3; --c-600:#1680a4; --c-700:#196885; --c-800:#1d556d; --c-900:#1c475d; --c-950:#0d2e3f;
+    }
+    html{scroll-behavior:smooth}
+    /* subtle glass for navbar */
+    .glass{backdrop-filter:saturate(140%) blur(8px); background: color-mix(in srgb, var(--c-50) 75%, transparent);}
+  </style>
+</head>
+<body class="bg-[#eefcfd] text-[#0d2e3f] selection:bg-[#d3f5fa]">
+  <!-- Navbar -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50">
+    <nav class="glass border-b border-[#ace9f5]/50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#top" class="flex items-center gap-2 font-semibold tracking-wide">
+            <!-- <span class="inline-block h-3 w-3 rounded-full bg-[#33bcdd]"></span> -->
+            <span>My Portfolio - Programmer</span>
+          </a>
+          <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-[#ace9f5]" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <ul id="menu" class="hidden sm:flex items-center gap-6 text-sm">
+            <li><a class="hover:text-[#1680a4]" href="#about">About</a></li>
+            <li><a class="hover:text-[#1680a4]" href="#skills">Skills</a></li>
+            <li><a class="hover:text-[#1680a4]" href="#projects">Projects</a></li>
+            <li><a class="hover:text-[#1680a4]" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- mobile dropdown -->
+        <ul id="mobileMenu" class="sm:hidden hidden grid gap-3 pb-4 text-sm">
+          <li><a class="block rounded-xl px-3 py-2 bg-[#d3f5fa]" href="#about">About</a></li>
+          <li><a class="block rounded-xl px-3 py-2 bg-[#d3f5fa]" href="#skills">Skills</a></li>
+          <li><a class="block rounded-xl px-3 py-2 bg-[#d3f5fa]" href="#projects">Projects</a></li>
+          <li><a class="block rounded-xl px-3 py-2 bg-[#d3f5fa]" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero / Header image -->
+  <section class="relative pt-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="order-2 lg:order-1 py-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-[#1c475d]">
+            Hello👋 <br/>  I am a <span class="bg-gradient-to-r from-[#33bcdd] to-[#1680a4] bg-clip-text text-transparent">  4th-year <br/>  IT student</span>
+          </h1>
+          <p class="mt-4 text-[#196885] max-w-prose">
+            กำลังศึกษาและพัฒนาทักษะด้านการเขียนโปรแกรม มีความสนใจในเทคโนโลยีใหม่ ๆ และพร้อมที่จะเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-2xl border border-[#33bcdd] px-4 py-2 font-medium hover:bg-[#d3f5fa]">
+              ดูผลงาน
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-2xl bg-[#33bcdd] px-4 py-2 font-medium text-white hover:bg-[#17a0c3]">ติดต่อ</a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="relative aspect-[16/10] w-full overflow-hidden rounded-3xl border border-[#ace9f5] shadow">
+            <!-- Decorative gradient background (fallback if image fails) -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#d3f5fa] via-[#75d8ed] to-[#33bcdd]"></div>
+            <!-- Header image placeholder -->
+            <img alt="Header" loading="lazy" class="absolute inset-0 h-full w-full object-cover"
+                 src="pkthumbnail.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#1c475d]">About</h2>
+      <p class="mt-4 leading-relaxed text-[#196885]">
+       My name is Chompunut Rueangrit, a 4th-year IT student in the Faculty of Informatics at Burapha University. I am interested in web development and various IT-related fields. I have experience in programming with HTML, CSS, JavaScript, Node.js, Python, PHP, and more. I enjoy learning new technologies and am always ready to take on new challenges in my work.
+      </p>
+      <div class="mt-6 grid sm:grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-[#ace9f5] bg-white/60 p-4">
+          <p class="text-sm text-[#1d556d]">⚡Confident </p>
+        </div>
+        <div class="rounded-2xl border border-[#ace9f5] bg-white/60 p-4">
+          <p class="text-sm text-[#1d556d]">🚀 Teamwork </p>
+        </div>
+        <div class="rounded-2xl border border-[#ace9f5] bg-white/60 p-4">
+          <p class="text-sm text-[#1d556d]">🎯Adaptability </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 sm:py-20 bg-[#d3f5fa]">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[#1c475d]">Skills</h2>
+        
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Each skill card -->
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">HTML</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">HTML5</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">CSS</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">CSS3 / Tailwind</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">JS</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">JavaScript</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">NODE</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">Node.js</p>
+        </div>
+    
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">PY</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">Python</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">PHP</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">PHP</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">JAVA</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">Java</p>
+        </div>
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">SQL</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">MySQL / MariaDB</p>
+        </div>
+        
+        <div class="group rounded-2xl border border-[#ace9f5] bg-white p-4 text-center hover:shadow">
+          <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eefcfd] ring-1 ring-[#ace9f5]">
+            <span class="font-bold text-[#196885]">UX</span>
+          </div>
+          <p class="text-sm text-[#1d556d]">UI/UX</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#1c475d]">Projects</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card -->
+       <article class="rounded-2xl border border-[#ace9f5] bg-white overflow-hidden shadow-sm">
+  <div class="h-36 bg-gradient-to-br from-[#d3f5fa] via-[#75d8ed] to-[#33bcdd] 
+              flex items-center justify-center overflow-hidden">
+    <img
+      src="https://angsila.cs.buu.ac.th/~65160029/ifdata.png"
+      alt="IF Work Data Collection cover"
+      class="block max-h-full max-w-full object-contain"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="p-4">
+    <h3 class="font-semibold text-[#1c475d]">IF_Work_Data_Collection</h3>
+    <p class="mt-1 text-sm text-[#1d556d]">Website for collecting Work Data for IF Faculty's Officer</p>
+    <div class="mt-3 flex flex-wrap gap-2 text-xs">
+      <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">Node.js</span>
+      <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">CSS</span>
+      <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">JS</span>
+    </div>
+  </div>
+</article>
+
+
+        <article class="rounded-2xl border border-[#ace9f5] bg-white overflow-hidden shadow-sm">
+          <div class="h-36 bg-gradient-to-br from-[#d3f5fa] via-[#75d8ed] to-[#33bcdd]"></div>
+          <div class="p-4">
+            <h3 class="font-semibold text-[#1c475d]">Project B</h3>
+            <p class="mt-1 text-sm text-[#1d556d]">คำอธิบายสั้น ๆ ของโปรเจกต์</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">Node</span>
+              <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">EJS</span>
+            </div>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-[#ace9f5] bg-white overflow-hidden shadow-sm">
+          <div class="h-36 bg-gradient-to-br from-[#d3f5fa] via-[#75d8ed] to-[#33bcdd]"></div>
+          <div class="p-4">
+            <h3 class="font-semibold text-[#1c475d]">Project C</h3>
+            <p class="mt-1 text-sm text-[#1d556d]">คำอธิบายสั้น ๆ ของโปรเจกต์</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">PHP</span>
+              <span class="rounded-full bg-[#eefcfd] px-2 py-1 ring-1 ring-[#ace9f5]">MySQL</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-20 bg-[#d3f5fa]">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#1c475d]">Contact</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <div class="rounded-2xl border border-[#ace9f5] bg-white/70 p-6">
+          <p class="text-sm text-[#1d556d]">Email</p>
+          <a class="mt-1 inline-block text-[#1680a4] hover:underline" href="mailto:chompunutr04@gmail.com">chompunutr04@gmail.com</a>
+          <p class="mt-4 text-sm text-[#1d556d]">Social Media</p>
+          <div class="mt-1 flex gap-3 text-sm">
+            <a class="rounded-full bg-[#eefcfd] px-3 py-1 ring-1 ring-[#ace9f5]" href="https://github.com/chompunutr04">GitHub</a>
+            <a class="rounded-full bg-[#eefcfd] px-3 py-1 ring-1 ring-[#ace9f5]" href="https://www.linkedin.com/in/chompunut-rueangrit-424aba2a6 ">LinkedIn</a>
+           
+          </div>
+        </div>
+        <form class="rounded-2xl border border-[#ace9f5] bg-white p-6 grid gap-3">
+          <input class="w-full rounded-xl border border-[#ace9f5] bg-[#eefcfd] px-3 py-2" placeholder="Name" />
+          <input class="w-full rounded-xl border border-[#ace9f5] bg-[#eefcfd] px-3 py-2" placeholder="Email" />
+          <textarea rows="4" class="w-full rounded-xl border border-[#ace9f5] bg-[#eefcfd] px-3 py-2" placeholder="Message"></textarea>
+          <button type="button" class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-[#33bcdd] px-4 py-2 font-medium text-white hover:bg-[#17a0c3]">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-sm text-[#1d556d]">
+      © <span id="y"></span> · Chompunut Rueangrit · Chonburi,Thailand
+  </footer>
+
+  <a href="#top" class="fixed bottom-5 right-5 inline-flex items-center justify-center rounded-full bg-[#33bcdd] p-3 text-white shadow-lg ring-2 ring-white/50 hover:bg-[#17a0c3]" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </a>
+
+  <script>
+    // Navbar: mobile toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click',()=>{
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // dynamic year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Optional: change nav styling on scroll
+    const header = document.querySelector('header nav');
+    const onScroll = () => {
+      if(window.scrollY > 8){
+        header.classList.add('shadow','border-[#75d8ed]');
+      } else {
+        header.classList.remove('shadow');
+      }
+    };
+    document.addEventListener('scroll', onScroll);
+
+    // --- เปิดแท็บใหม่ให้ลิงก์ที่ชี้ไปยัง portfolio.html (พาธนี้) ---
+  (function () {
+    const TARGET_URL = "https://angsila.cs.buu.ac.th/~65160029/portfolio.html";
+
+    // เลือกทุก <a> ที่มี href และแปลงเป็น absolute URL เพื่อเทียบแบบแม่นยำ
+    document.querySelectorAll('a[href]').forEach(a => {
+      try {
+        const abs = new URL(a.getAttribute('href'), location.href).href;
+        if (abs === TARGET_URL) {
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener noreferrer');
+        }
+      } catch (_) { /* href ไม่ใช่ URL ที่ถูกต้อง - ข้ามไป */ }
+    });
+
+    // กันกรณีมีการสร้างลิงก์แบบ dynamic ภายหลัง (เช่น SPA)
+    const mo = new MutationObserver(() => {
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (!a.hasAttribute('data-checked')) {
+          a.setAttribute('data-checked', '1');
+          try {
+            const abs = new URL(a.getAttribute('href'), location.href).href;
+            if (abs === TARGET_URL) {
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', 'noopener noreferrer');
+            }
+          } catch (_) {}
+        }
+      });
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+  })();
+  </script>
+</body>
+</html>
